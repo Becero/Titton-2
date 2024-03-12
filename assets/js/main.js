@@ -162,37 +162,39 @@
    * Clients Slider
    */
   new Swiper('.clients-slider', {
-    speed: 400,
+    speed: 50,
     loop: true,
     autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
+        delay: 50,
+        disableOnInteraction: false
     },
-    slidesPerView: 'auto',
+    slidesPerView: 1, // Configuração para exibir apenas um slide por vez
     pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true
     },
     breakpoints: {
-      320: {
-        slidesPerView: 2,
-        spaceBetween: 40
-      },
-      480: {
-        slidesPerView: 3,
-        spaceBetween: 60
-      },
-      640: {
-        slidesPerView: 4,
-        spaceBetween: 80
-      },
-      992: {
-        slidesPerView: 6,
-        spaceBetween: 120
-      }
+        20: {
+            slidesPerView: 1,
+            spaceBetween: 40
+        },
+        80: {
+            slidesPerView: 1,
+            spaceBetween: 60
+        },
+        40: {
+            slidesPerView: 1,
+            spaceBetween: 80
+        },
+        992: {
+            slidesPerView: 1,
+            spaceBetween: 120
+        }
     }
-  });
+});
+
+
 
   /**
    * Porfolio isotope and filter
