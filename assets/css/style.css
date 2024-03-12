@@ -339,7 +339,7 @@ h6 {
   left: 3%; /* Posição inicial em relação ao container2 */
   height: 90%; /* Altura ajustável */
   width: 50%; /* Largura ajustável */
-  clip-path: inset(5% 5% 5% 15%); /* Corta a imagem conforme necessário */
+  clip-path: inset(15% 15% 15% 15%); /* Corta a imagem conforme necessário */
   filter: grayscale(150%); /* Transforma a imagem em preto e branco */
   background-color: #777777; /* Cor de fundo cinza */
 }
@@ -481,8 +481,7 @@ h6 {
 .service-text {
   margin-top: 5px; /* Ajuste o espaçamento conforme necessário */
   text-align: center; /* Alinha o texto ao centro */
-  font-weight: 500; 
-}
+  font-weight: 500; }
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
