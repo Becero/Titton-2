@@ -340,13 +340,13 @@ h6 {
 ==========================================================================================*/
 .container-xxl {
   position: relative;
-  height: 100vh; /* Defina a altura conforme necessário */
+  height: 100vh; 
   background:
-      url('/assets/img/02.png') top left / 65% 100% no-repeat, /* Primeira imagem */
-      url('/assets/img/Links/03.jpg') top right / 50% 100% no-repeat, /* Segunda imagem */
-      linear-gradient(to right, transparent, transparent) calc(50% - 1px), /* Linha preta */
-      linear-gradient(to left, transparent, transparent) calc(50% + 1px); /* Linha preta */
-  filter: grayscale(100%); /* Aplica escala de cinza a todas as imagens */
+      url('../assets/img/02.png') top left / 65% 100% no-repeat, 
+      url('../assets/img/Links/03.jpg') top right / 50% 100% no-repeat, 
+      linear-gradient(to right, transparent, transparent) calc(50% - 1px), 
+      linear-gradient(to left, transparent, transparent) calc(50% + 1px); 
+  filter: grayscale(100%); 
 }
 
 .container-xxl::after {
