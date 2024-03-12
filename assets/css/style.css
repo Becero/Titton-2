@@ -427,11 +427,6 @@ h6 {
   transform: translateX(-50%);
   height: 5%; /* Altura ajustável */
 }
-
-.img-fluid2{
-  clip-path: inset(25% 25% 5% 30%); /* Corta a imagem conforme necessário */
-}
-
 .btn-portfolio {
   position: absolute;
   top: 80%; /* Posição relativa à altura do contêiner */
