@@ -279,7 +279,7 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
-
+/*Banner Principal */
 .container2 {
   position: relative;  
   width: 100%; /* Largura total */
@@ -363,6 +363,29 @@ h6 {
   font-weight: bold;
   border: 0.2vw solid #ffffff; /* Borda branca */
  
+}
+
+@media (max-width: 768px) {
+  .texto, .texto2 {
+    font-size: 6vw;
+  }
+
+  .texto3, .texto4 {
+    font-size: 12vw;
+    letter-spacing: 3vw;
+  }
+
+  .btn-portfolio {
+    padding: 4vw 8vw;
+  }
+}
+
+
+
+@media (max-width: 992px) {
+    .section-title.mb-4 {
+        margin-bottom: 10px !important; /* Ajuste a margem inferior para dispositivos móveis */
+    }
 }
 
 /*===============================Sobre=================================*/
@@ -501,8 +524,8 @@ section {
   font-size: 32px;
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -530,8 +553,8 @@ section {
   content: "";
   background: #1b1b1b;
   position: absolute;
-  bottom: 60px;
-  top: 60px;
+  bottom: 10px;
+  top: 10px;
   left: 0;
   right: 0;
   transform: skewY(-3deg);
