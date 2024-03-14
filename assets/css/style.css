@@ -532,18 +532,28 @@ h6 {
 }
 
 
-.container5{
+.container5 {
   background-image: url(../img/Links/Teste22.jpg);
-  top: 20%;   
+  background-size: cover; /* Ou contain, dependendo do efeito desejado */
+  top: 20%;
   height: 100%;
-  width: 100%;  
-  padding-bottom:  50px;
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 100px;
 }
 .logo09{
   position: relative;
-  margin-top: 50px;
+  top: 100px;
   height: 25%;
   width: 25%;
+}
+
+@media (max-width: 576px) {
+  .logo09{
+    top: 10px;
+  height: 25%;
+  width: 25%;
+ }
 }
  
 /*--------------------------------------------------------------
@@ -561,6 +571,20 @@ section {
   position: relative;
   padding-top: 50px;
 }
+
+.pp{
+  text-align: center; 
+  text-justify: inter-word; 
+  padding: 10%; 
+  color: white;
+}
+
+@media (max-width: 576px) {
+  .lpp{
+   padding: 5px;
+ }
+}
+
 
 .section-title h2 {
   font-size: 32px;
@@ -646,30 +670,6 @@ section {
   color: #e03a3c;
   content: "/";
 }
-/*==========================================================================================
-===========================================================================================
-==========================================================================================*/
-/* .container5{
-  width: 100%;
-  height:100%;  
-}
-
-.imgqs{
-  top: 20%;   
-  height: 100%;
-  width: 100%;  
-  padding-bottom:  50px;
-}
-.logo09{
-  position: relative;
-  margin-top: 50px;
-  height: 25%;
-  width: 25%;
-} */
-
-/*==========================================================================================
-===========================================================================================
-==========================================================================================*/
 
 .content {
   position: absolute;
@@ -679,8 +679,6 @@ section {
   text-align: center;
   color: white; /* Cor do texto */
 }
-
-
 
 /*--------------------------------------------------------------
 # Services
