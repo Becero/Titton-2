@@ -33,6 +33,8 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -126,8 +128,14 @@ h6 {
 /**
 * Desktop Navigation 
 */
+/* .navbar {
+  padding: 0;
+} */
+
 .navbar {
   padding: 0;
+  z-index: 1000; /* Adicionado z-index maior */
+  
 }
 
 .navbar ul {
@@ -187,15 +195,53 @@ h6 {
   color: #fff;
 }
 
+
+
+
 @media (max-width: 991px) {
   .mobile-nav-toggle {
-    display: block;
+    display: flex;
+    position: relative;
   }
 
   .navbar ul {
     display: none;
   }
+
+  .navbar-mobile {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar-mobile ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px; /* Ajuste conforme necessário */
+  }
+
+  .navbar-mobile a,
+  .navbar-mobile a:focus {
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #fff;
+    margin: 10px 0; /* Ajuste conforme necessário */
+  }
 }
+
+
 
 .navbar-mobile {
   position: fixed;
@@ -279,77 +325,26 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
-/*Banner Principal */
+
+
+
+/*=====================Banner Principal ==================================*/
 .container2 {
-  position: relative;  
-  width: 100%; /* Largura total */
-  height: auto; /* Altura ajustável */
-  overflow: hidden; 
+  position: relative; 
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  top: 70px;  
 }
 
-.texto {
-  position: absolute;
-  top: 32%; /* Posiciona o texto verticalmente no meio */
-  left: 28%; /* Posiciona o texto horizontalmente no meio */
-  transform: translate(-50%, -50%); /* Move o texto para o centro */
-  color: white; /* Cor do texto */
-  font-size: 1vw; /* Tamanho da fonte relativo à largura da viewport */
-  
-  font-family: "Throhand Ink Italic", sans-serif;
-}
-
-.texto2 {
-  position: absolute;
-  top: 35%; /* Posiciona o texto verticalmente no meio */
-  left: 29%; /* Posiciona o texto horizontalmente no meio */
-  transform: translate(-50%, -50%); /* Move o texto para o centro */
-  color: white; /* Cor do texto */
-  font-size: 1vw; /* Tamanho da fonte relativo à largura da viewport */  
-  font-family: "Throhand Ink Italic", sans-serif;
-}
-
-.texto3 {
-  position: absolute;
-  top: 55%; /* Posiciona o texto verticalmente no meio */
-  left: 52%; /* Posiciona o texto horizontalmente no meio */
-  width: 85%; /* Largura do texto */ 
-  transform: translate(-50%, -50%); /* Move o texto para o centro */
-  color: white; /* Cor do texto */
-  font-size: 14.5vw; /* Tamanho da fonte relativo à largura da viewport */
-  letter-spacing: 7vw; /* Espaçamento entre letras relativo à largura da viewport */ 
-  text-align: justify; /* Justifica o texto */
-  font-family: "Arial Rounded MT Bold", sans-serif;
-}
-.texto4 {
-  position: absolute;
-  top: 55%; /* Posiciona o texto verticalmente no meio */
-  left: 102.5%; /* Posiciona o texto horizontalmente no meio */
-  width: 85%; /* Largura do texto */ 
-  transform: translate(-50%, -50%); /* Move o texto para o centro */
-  color: white; /* Cor do texto */
-  font-size: 14.5vw; /* Tamanho da fonte relativo à largura da viewport */
-  letter-spacing: 5vw; /* Espaçamento entre letras relativo à largura da viewport */ 
-  text-align: justify; /* Justifica o texto */
-  font-family: "Arial Rounded MT Bold", sans-serif;
-}
-
-.imagem-12 {
-  position: absolute;  
-  top: 5%; 
-  left: 3%; /* Posição inicial em relação ao container2 */
-  height: 90%; /* Altura ajustável */
-  width: 50%; /* Largura ajustável */
-  clip-path: inset(15% 15% 15% 15%); /* Corta a imagem conforme necessário */
-  filter: grayscale(150%); /* Transforma a imagem em preto e branco */
+.imagem-12 { 
+  top: 20%;   
+  height: 100%; /* Altura ajustável */
+  width: 100%; /* Largura ajustável */   
   background-color: #777777; /* Cor de fundo cinza */
-}
-
-.imagem-22 {
-  position: relative;
-  left: 66%; /* Posição relativa à largura do contêiner */
-  width: 50%; /* Largura relativa à largura do contêiner */
-  transform: translateX(-50%);
-  height: 5%; /* Altura ajustável */
+  z-index: 999;
+  padding-bottom:  20px;
+  margin-bottom: 50px;
 }
 .btn-portfolio {
   position: absolute;
@@ -361,32 +356,43 @@ h6 {
   padding: 1vw 3vw; /* Preenchimento relativo à largura da viewport */
   text-decoration: none;
   font-weight: bold;
-  border: 0.2vw solid #ffffff; /* Borda branca */
- 
+  border: 0.2vw solid #ffffff; /* Borda branca */ 
 }
 
-@media (max-width: 768px) {
-  .texto, .texto2 {
-    font-size: 6vw;
-  }
+@media (max-width: 768px) {   
 
-  .texto3, .texto4 {
-    font-size: 12vw;
-    letter-spacing: 3vw;
-  }
+  .imagem-12{
+    top: 20%;   
+    height: 150%; /* Altura ajustável */
+    width: 100%; /* Largura ajustável */   
+    background-color: #777777; /* Cor de fundo cinza */
+    z-index: 999;
+    padding-bottom:  20px;
+    margin-bottom: 50px;;
 
+  }
   .btn-portfolio {
-    padding: 4vw 8vw;
+    padding: 4vw 6vw;
+    top: 65%;
+    margin-top: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+  }
+  .btn-portfolio:hover{
+
+    background-color: rgb(222, 222, 222);
+  
   }
 }
 
-
-
-@media (max-width: 992px) {
-    .section-title.mb-4 {
+@media (max-width: 792px) {
+    .section-title.mb-2 {
         margin-bottom: 10px !important; /* Ajuste a margem inferior para dispositivos móveis */
     }
 }
+
+
+
 
 /*===============================Sobre=================================*/
 .section-center {
@@ -395,7 +401,7 @@ h6 {
   justify-content:flex-start;
   align-items: center;
   height: 100vh; /* Defina a altura conforme necessário */
-  background-color: #f0f0f0; /* Cor de fundo opcional */
+  /* background-color: #f0f0f0; Cor de fundo opcional */
 }
 
 .move-down {
@@ -415,7 +421,7 @@ h6 {
 
 .about-img img { 
   height: auto;
-  display: block;
+  display: flex;
 }
 
 .img-overlay {
@@ -456,13 +462,7 @@ h6 {
 .title {
   font-size: 24px;
   font-weight: bold;
-}
-
-.separator {
-  width: 50%;
-  margin: 15px auto;
-  border: none;
-  border-top: 2px solid #fff;
+  display: flex;
 }
 
 .subtitle {
@@ -475,36 +475,77 @@ h6 {
   }
 }
 
+/*==================================================================*/
 
-
-.service-container {
-  top: 10%;
+ .service-container {
+  top: 20%;
   background-color: black;
-  height: 100vh;
+  height: auto; /* Alterado de 100vh para se ajustar ao conteúdo */
   color: white;
   text-align: center;
-  padding: 50px 0;
-}
-
-.icon {
-  color: gold;
+  padding: 50px 0; /* Reduzido o padding para torná-lo mais compacto */
+ 
+  display: flex;
+  flex-direction: column; /* Alterado para coluna para alinhar verticalmente os itens */
 }
 
 .icon-row {
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
+  flex-wrap: wrap; /* Permitir que os itens se ajustem à largura da tela */
+  /* margin-bottom: 20px; */
+  padding-bottom: 100px;
 }
 
 .icon-col {
   flex: 1;
-  padding: 0 10px;
+  padding: 10px;
+  top: 10px;
+  text-align: center; /* Centralizar o texto */
 }
 
 .service-text {
-  margin-top: 5px; /* Ajuste o espaçamento conforme necessário */
-  text-align: center; /* Alinha o texto ao centro */
-  font-weight: 500; }
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .icon-col {
+    flex-basis: 50%; /* Alterado para 50% para exibir 2 colunas por linha */
+    padding: 20px;
+  }
+
+  .icon-row:nth-child(2) .icon-col {
+    margin-top: 10px; /* Aumenta o espaço entre as linhas de ícones */
+  }
+}
+
+@media (max-width: 576px) {
+  .icon-col {
+    flex-basis: 100%; /* Alterado para 100% para exibir 1 coluna por linha em telas menores */
+  }
+}
+@media (max-width: 576px) {
+  .icon-row {
+    padding-bottom: 30px;  }
+}
+
+
+.container5{
+  background-image: url(/assets/img/Links/Teste22.jpg);
+  top: 20%;   
+  height: 100%;
+  width: 100%;  
+  padding-bottom:  50px;
+}
+.logo09{
+  position: relative;
+  margin-top: 50px;
+  height: 25%;
+  width: 25%;
+}
+ 
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -516,8 +557,9 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 5px;
   position: relative;
+  padding-top: 50px;
 }
 
 .section-title h2 {
@@ -532,7 +574,7 @@ section {
 .section-title h2::after {
   content: "";
   position: absolute;
-  display: block;
+  display: flex;
   width: 50px;
   height: 3px;
   background: #e03a3c;
@@ -607,35 +649,23 @@ section {
 /*==========================================================================================
 ===========================================================================================
 ==========================================================================================*/
-.container5{
-  background-color: #111;
+/* .container5{
+  width: 100%;
+  height:100%;  
+}
+
+.imgqs{
+  top: 20%;   
+  height: 100%;
+  width: 100%;  
+  padding-bottom:  50px;
+}
+.logo09{
   position: relative;
-  padding-top: -50%;
-}
-
-.container-xxl {
-  position: a;
-  height: 100vh; /* Defina a altura conforme necessário */
-  background:
-      url('/assets/img/02.png') top left / 65% 100% no-repeat, /* Primeira imagem */
-      url('/assets/img/Links/03.jpg') top right / 50% 100% no-repeat, /* Segunda imagem */
-      linear-gradient(to right, transparent, transparent) calc(50% - 1px), /* Linha preta */
-      linear-gradient(to left, transparent, transparent) calc(50% + 1px); /* Linha preta */
-  filter: grayscale(100%); /* Aplica escala de cinza a todas as imagens */
-}
-
-.container-xxl::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  clip-path: inset(1 1 0 0); /* Corta 135px do lado esquerdo */
-  z-index: 1;
-}
-
-
+  margin-top: 50px;
+  height: 25%;
+  width: 25%;
+} */
 
 /*==========================================================================================
 ===========================================================================================
@@ -704,9 +734,20 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
+
+
+
 .portfolio .portfolio-item {
   margin-bottom: 30px;
 }
+
+
+@media (max-width: 768px) {
+  .portfolio-item {
+      margin-top: 20px;
+  }
+}
+
 
 .portfolio #portfolio-flters {
   padding: 0;
