@@ -404,6 +404,24 @@ h6 {
   /* background-color: #f0f0f0; Cor de fundo opcional */
 }
 
+
+@media (max-width: 1600px) {
+  .section-center {
+    width: 100%;
+    height: 90vh;
+    background-image: url(../img/Links/Teste31.jpg);  
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@media (max-width: 920px) {
+  .imgab{
+   display: none;
+  
+  }
+}
+
 .move-down {
   display: inline-block;
   margin-top: 0.5rem; /* Ajuste a margem superior conforme necessário */
@@ -555,6 +573,19 @@ h6 {
   width: 25%;
  }
 }
+
+.imgab{
+
+  top: 5%;
+  height: 100%;
+  width: 100%;
+  padding: 5px;  
+
+}
+
+
+
+
  
 /*--------------------------------------------------------------
 # Sections General
@@ -580,7 +611,7 @@ section {
 }
 
 @media (max-width: 576px) {
-  .lpp{
+  .pp{
    padding: 5px;
  }
 }
