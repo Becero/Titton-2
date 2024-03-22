@@ -646,14 +646,14 @@ h6 {
   background-size:cover;
   background-position: center center;
   min-height: 100%;
-  padding-bottom: 100px; 
+  padding-bottom: 90px; 
 }
 
 .container33 {
   display: flex;
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
-  margin-bottom: 20px; /* Espaçamento entre os elementos */
+  margin-bottom: 10px; /* Espaçamento entre os elementos */
 }
 
 @media (max-width:  720px) {
@@ -666,7 +666,7 @@ h6 {
   .trab11{
     display: flex;
     width: 100%;
-    height: 54vh;
+    height: 44vh;
     background-image: url(../img/Links/consulta2.png);  
     background-repeat: no-repeat;
     background-size: contain;
@@ -680,7 +680,7 @@ h6 {
   .trab22{
     display: flex;
     width: 100%;
-    height: 54vh;
+    height: 44vh;
     background-image: url(../img/Links/desenvolvimento2.png);  
     background-repeat: no-repeat;
     background-size: contain;
