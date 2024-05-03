@@ -7,8 +7,7 @@
   --cor-preto: #000000;
   --cor-gelo: #f4f4f4;
 }  
-body { background-color:var(--cor-preto); }
-h1   { font-family: arial; font-weight: lighter; text-align:center; margin: 100PX auto; color: var(--cor-gelo); }  
+
 
 div#preloader {  
   position: fixed;
