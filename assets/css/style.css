@@ -1,15 +1,12 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-
 :root {
   --cor-amarelo: #ffef00;
   --cor-preto: #000000;
   --cor-gelo: #f4f4f4;
 }  
-
-
-div#preloader {  
+#preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -17,24 +14,19 @@ div#preloader {
   bottom: 0;
   background-color: var(--cor-preto);
   z-index: 99999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.loader .title {
-  color: var(--cor-amarelo);
-  font-size: 14px;
-  letter-spacing: 2px;
-  font-weight: lighter;
-  text-align: center;
-  font-family: arial;
-}
+
 .loader {
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top:-50px; 
-  margin-left:-50px;  
+  width: 200px; /* Ajuste o tamanho do vídeo conforme necessário */
+  height: 200px; /* Ajuste o tamanho do vídeo conforme necessário */
+  position: relative;
 }
+
 /*Carregando*/  
-.carregando {
+/* .carregando {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -46,14 +38,16 @@ div#preloader {
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
+
 @keyframes rotation {
   0% {
-    transform: rotate(0deg);
+      transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+      transform: rotate(360deg);
   }
-} 
+}  */
+
 
 /*=====================================*/
 
@@ -80,8 +74,6 @@ h5,
 h6 {
   font-family: "Raleway", sans-serif;
 }
-
-
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -702,7 +694,85 @@ h6 {
   align-items: center; /* Centraliza verticalmente */
   justify-content: center; /* Centraliza horizontalmente */
   margin-bottom: 20px; /* Espaçamento entre os elementos */
+  animation: slideInRight 1s forwards; /* Define a animação */
 }
+/* ============================== */
+
+
+.trab1 {
+  animation: slideInRight1 1s forwards;
+}
+
+.trab2 {
+  animation: slideInLeft1 1s forwards;
+  animation-delay: 1.5s; /* Delay para iniciar após a primeira imagem */
+}
+
+.trab3 {
+  animation: slideInRight2 1s forwards;
+  animation-delay: 2s; /* Delay para iniciar após a segunda imagem */
+}
+
+.trab4 {
+  animation: slideInLeft2 1s forwards;
+  animation-delay: 2.5s; /* Delay para iniciar após a terceira imagem */
+}
+
+@keyframes slideInRight1 {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInLeft1 {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInRight2 {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+@keyframes slideInLeft2 {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+
+/* ============================== */
+
+
+
 
 @media (max-width:  720px) {
   .container33{ 
